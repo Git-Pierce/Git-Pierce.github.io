@@ -1,163 +1,61 @@
-          <!DOCTYPE html>
-          <html lang="en">
-          <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Forms Intro</title>
-              <link rel="stylesheet" href="styles.css">
-          </head>
-          <body>
-              <header id="main">
-                  <div class="container">
-                      <h1>Forms Intro</h1>
-                  </div>
-              </header>
-              <div id="navbar">
-                  <div class="container">
-                      <ul>
-                          <li><a href="#">Form1 - Sample 1</a> </li>
-                          <li><a href="#">Form2 - Sample 2</a></li>
-                          <li><a href="#">Form3 - FieldSet</a></li>
-                          <li><a href="#">Etc...</a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="wrapper">
-                  <div class="box1">
-                      <h1>Form1 - Form Sample 1</h1>
-                      <form action="subscribe.php" method="POST">
-                        <p>Enter your email: </p>
-                        <div class="form-group">
-                          <label for="">Email: </label>
-                          <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="">
-                          <small id="emailHelpId" class="form-text text-muted"></small>
-                        </div>
-                        <p>
-                          <input type="button" value="Subscribe">
-                        </p>
-                    </form>
-                  </div>
-                  <div class="box2">
-                      <h2>Form2 - Form Sample 2</h2>
-                      <form class="form2">
-                        
-                            <label for="">Quantity:</label>  
-                            <input type="text" id="Quantity" value="1" size="4" readonly>
-
-                            <label for="">UserName:</label>
-                            <input type="text" id="UserName" autofocus>
-                            <label for="password">Password:</label>
-                            <input type="text" id="password" maxlength="6" placeholder="Enter your password">
-                            <input type="button" value="Submit">
-                        
-                      </form>
-                  </div>
-                  <div class="box3">
-                      <h1>Form3 - Fieldset, Radio and Checkbox</h1>
-                      <form class="form3">
-                        
-                            <label for="quantity">Quantity:</label>  
-                            <input type="text" name="quantity" id="Quantity" value="1" size="4" ><br>
-                            <fieldset>
-                                <legend>Crust</legend>
-                            
-                                <input type="radio" name="crust1" id="crust1" value="thin" >
-                                <label for="crust1">Thin Crust</label>
-                                <input type="radio" name="crust2" id="crust2" value="deep" autofocus>
-                                <label for="crust2">Deep Dish</label>
-                                <input type="radio" name="crust3" id="crust3" value="hand" autofocus>
-                                <label for="crust3">Hand Tossed</label>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Toppings</legend>
-                            
-                                <input type="checkbox" name="crust" id="crust1" value="mushroom" >
-                                <label for="crust1">Mushroom</label>
-                                <input type="checkbox" name="crust" id="crust2" value="peppers">
-                                <label for="crust2">Peppers</label>
-                                <input type="checkbox" name="crust" id="crust3" value="garlic">
-                                <label for="crust3">Garlic</label>
-                            </fieldset>
-                        
-                      </form>
-                  </div>
-                  <div class="box4">
-                    <h1>Form4 - Selection, Date, Number Type</h1>
-                    <form class="form4">   
-                        <fieldset>
-                            <legend>Member Info</legend>
-                            <label for="">Membership Type:</label>
-                            <select name="" id="">
-                                <option value="j">Junior</option>
-                                <option value="r">Regular</option>
-                                <option value="c">Charter</option>
-                                <option value="l">Lifetime</option>
-                            </select><br>
-                            
-                            <label for="">Start Date:</label>
-                            <input type="date" name="startdate" id="startdate" ><br>
-                            <label for="">Tickets:</label>
-                            <input type="number" name="tickets" id="tickets" value="2" min="1" max="4">
-                            
-                        </fieldset>
-                      
-                    </form>
-                  </div>
-                    <div class="box5">
-                        <h1>Form5 - Form with Output Element</h1>
-                        <form class="form5" onsubmit="return false">   
-                            <fieldset>
-                                <legend>Calculate a Value</legend>
-                                <p>Enter numbers in both fields and click Calculate button:</p>
-                                <input type="number" id="x" min="100" step="5" value="100"> - <input type="number" id="y" min="100" step="5" value="100"><br>
-                                
-                                
-                                <input type="button" value="Calculate" onclick="result.value = parseInt(x.value) - parseInt(y.value)"><br>
-                                <label for="">Total:</label>
-                                <output name="result" for="x y"></output>
-                                
-                            </fieldset>
-                          
-                        </form>
-                    </div>
-                    <div class="box6">
-                        <h1>Form6 - Search Google website Function</h1>
-                        <form class="form6" method="GET" action="https://www.google.com/search">   
-                            <fieldset>
-                                <legend>Search form</legend>
-                                
-                                <input type="search" name="q" size="30" maxlength="255"> <input type="hidden" name="domains" value="https://www.google.com">
-                                <input type="hidden" name="sitesearch" value="https://www.google.com">
-                                <input type="submit" value="Search" id="search">
-                                
-                                
-                                
-                                
-                            </fieldset>
-                          
-                        </form>
-                    </div>
-                    <div class="box7">
-                        <h1>Form7 - Data Validations</h1>
-                        <form class="form7">   
-                            <fieldset>
-                                <legend>Data Validation</legend>
-                                
-                                <label for="">Name:</label>  
-                                <input type="text" id="name" required>
-                                <label for="">ZipCode:</label>
-                                <input type="text" id="zip" required pattern "\d{5}([\-]\d{4})?" title="Must be 99999 or 99999-9999"><br>
-                                <label for="Phone">Phone:</label>
-                                <input type="text" id="phone" required pattern "\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-9999"><br>
-                                <input type="button" value="Submit">
-                                  
-                            </fieldset>
-                          
-                        </form>
-                    </div>
-               
-              </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Flex/styles.css">
+    <title> Intro to CSS Grids - 2Dimensional</title>
+    
+</head>
+<body>
+  <div class="container">
+       <div class="box1"><h1>Intro to CSS Grid</h1>
+       <ul>
+           <li>All Browsers support this layout as of March 2017.</li>
+            <li>FlexBox and CSS Grid are used for webpage layouts, including float property.  However float is a property and not an actual system for web page fluid layout.  </li>
+           <li>The most current system is CSS Grid. float property was meant to float text around images and not meant for page layout, Flex was created to address this issue.  However it also had some limitations.</li>
+           <li>CSS Grid is a 2Dimensional layouts which includes columns AND rows. Flexbox is either column or row (One Dimensional layout)</li>
+           <li>Bootstrap is a Twitter framework which uses and implements the Grid concept</li>
+          
+       </ul>
+       </div>
+       <div class="box2">
+           <h1>Responsive Web Design</h1>
+           <ul>
+               <li>Web display changes depending on the device size</li>
+               <li>Use @media queries to define the size</li>
               
-            
-          </body>
-          </html>       
+                <li>min-width property - mobile first design</li>
+                <li>max-width property - desktop first design</li>
+                <li>~phone 500px</li>
+                <li>~table 760 px</li>
+                <li>~desktop 960px</li>
+                <li>Media queries used in CSS, follows the cascading rule</li>
+               
+           </ul>
+        </div>
+        <div class="box3">
+            <h1>Flex Layout </h1>
+            <ul>
+                <li>1-dimensional layout, either row or column.</li>
+                <li>Has shortcomings, hence the Grid layout</li>
+            </ul>
+        </div>
+        <div class="box4">
+            <h2>Box4 - Float vs Flex vs Grid</h2>
+            <ul>
+                <li>Float was created to float text around images.  </li>
+                <li>Like tables it gets 'misused' in web layout.</li>
+                <a href="indexf.html" alt="Flexbox">FlexBox Sample</a>
+            </ul>
+           
+        </div>
+       
+        <div class="box5">
+            <img src="FlexboxvsCSSGrid.png" alt="FlexvsGrid" width="500">
+        </div>
+        <div class="box6">
+            <img src="GridLines.png" alt="GridLines" width="500">
+        </div>
+        
+    </div>
